@@ -1,17 +1,16 @@
 // Code your solution in this file!
-function distanceFromHqInBlocks(someValue){
+function distanceFromHqInBlocks(pickupLocation){
     const hqLocation = 42;
-    return Math.abs(someValue - hqLocation);
+    return Math.abs(pickupLocation - hqLocation);
     //returns the number of blocks given a value
 }
-function distanceFromHqInFeet(someValue){
-    const blocks = distanceFromHqInBlocks(someValue);
+function distanceFromHqInFeet(pickupLocation){
+    const blocks = distanceFromHqInBlocks(pickupLocation);
     return blocks * 264; //264 feet per block
     //returns the distance in feet
-    distanceFromHqInBlocks(someValue)
 }
 function distanceTravelledInFeet(start, destination){
-    const blocksTravelled = Math.abs(destination - start);
+    const blocksTravelled = Math.abs(start - destination);
     return blocksTravelled * 264;
 }
 function calculatesFarePrice(start, destination){
